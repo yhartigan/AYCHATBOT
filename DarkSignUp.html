@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYCHATBOT Home Page</title>
+  <link rel="stylesheet" href="DarkSignUp.css">
+  <link rel="icon"  href="favicon_io/favicon.ico?v1" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><h2>AYCHATBOT</h2>
+      </div>
+      <ul class="links">
+        <li><a href="DarkIndex.html">Home</a></li>
+        <li><a href="DarkAbout.html">About</a></li>
+        <li><a href="#">Sign Up / Log In</a></li>
+      </ul>
+      <a href="SignUpLogIn.html" class="action_btn">Light Mode</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="DarkIndex.html">Home</a></li>
+        <li><a href="DarkAbout.html">About Us</a></li>
+        <li><a href="#">Sign Up / Log In</a></li>
+        <li><a href="SignUpLogIn.html" class="action_btn">Light Mode</a></li>
+    </div>
+  </header>
+  <main>
+    <div class="div-textbox">
+      <span>
+        <h1>AYCHATBOT <br>Sign in</h1>
+        
+      </span>
+      <form class="form-container">
+        <!-- <div class="input-container"> -->
+        <div>
+          <!-- <label class="stack-label" type="email">Email </label> -->
+          <input class="box-input" type="email" placeholder="Email Address" name="email">
+          
+       </div>
+        <div>
+          <input class="box-input" type="password" placeholder="Password" name="psw">
+        <div>
+          <input class="submit-button" type="submit" placeholder="submit" value="Sign in">
+        </div>
+
+        </div>
+      </form>
+    </div>
+    
+    <!-- <div class="div-textbox">
+      <h1>Please<br> Log in</h1>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="submit" name="submit">
+    </div> -->
+      <!-- <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required> -->
+  </main>
+  <script>
+    /*defining variables*/
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function() { /*When you click*/
+      dropDownMenu.classList.toggle('open') /*on toggle btn*/
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen /*when toggle open*/
+      ? 'fa-solid fa-xmark' /*becomes X mark*/
+      : 'fa-solid fa-bars' /*closed stays hamburger*/
+    }
+  </script>
+</body>
+</html>

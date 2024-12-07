@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="practicestyles.css">
+  <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico?" >
+  <title>AYCHATBOT Home Page</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo"><h2>AYCHATBOT</h2>
+      </div>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="practiceAbout.html">About</a></li>
+        <li><a href="SignUpLogIn.html">Sign Up / Log In</a></li>
+      </ul>
+      <a href="DarkIndex.html" class="action_btn">Dark Mode</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="practiceindex.html">Home</a></li>
+        <li><a href="practiceAbout.html">About Us</a></li>
+        <li><a href="SignUpLogIn.html">Sign Up / Log In</a></li>
+        <li><a href="DarkIndex.html" class="action_btn">Dark Mode</a></li>
+    </div>
+  </header>
+  <main>
+  <!-- from ai.html -->
+  <div class="parent">
+    <div class="desc">
+      <h1 class="text">AYCHATBOT</h1>
+      <p>Here to assist you</p>
+      <button id="init">START CHAT</button>
+    </div>
+    <div>
+      <img src="/favicon_io/android-chrome-192x192.png?" alt="" class="bot-img">
+    </div>
+  </div>
+  <div id="test" style="position: fixed;bottom: 4rem; right: 8rem; display: none;">
+    <div class="child" id="chatbot">
+      <div class="header">
+        <div class="h-child">
+          <img src="/favicon_io/favicon-16x16.png" alt="avatar" id="avatar">
+          <div>
+            <span class="name">AYCHATBOT</span>
+            <br>
+            <span style="color:lawngreen">online</span>
+          </div>
+        </div>
+        <div>
+          <button class="refBtn"><i class="fa-solid fa-arrows-rotate" onclick="initChat()"></i></button>
+        </div>
+      </div>
+
+      <div id="chat-box">
+
+      </div>
+      <div class="footer">
+        <span>powered by AY</span>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- above ai.html -->
+
+  <!-- <main>--> <!-- put main in line -->
+    <!--------------SIDEBAR-------------->
+    <!-- <nav>
+      <ul class="sidebar">
+        <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+      </ul>
+    </nav>
+    
+    <div class="index">
+      <div><h1>How can I help you?</h1>
+        <p>
+          AYCHATBOT is here to help you with any questions you may have
+        </p>
+      </div>
+    </div>  
+
+      <div class="chatbox">
+        <textarea placeholder="Type your question here..." required></textarea>
+      </div> -->
+  </main>
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="AI.js"></script>
+  <script>
+    /*defining variables*/
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function() { /*When you click*/
+      dropDownMenu.classList.toggle('open') /*on toggle btn*/
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen /*when toggle open*/
+      ? 'fa-solid fa-xmark' /*becomes X mark*/
+      : 'fa-solid fa-bars' /*closed stays hamburger*/
+    }
+  </script>
+</body>
+</html>

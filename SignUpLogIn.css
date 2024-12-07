@@ -1,0 +1,250 @@
+* {
+  margin: 0; 
+  padding: 0;
+}
+
+html {
+  background: #fff7ef;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* min-width: 100%;
+  min-height: 100%; */
+  /* width: 1500px; */
+  max-width: cover;
+  max-height: cover;
+}
+
+/*-----------HEADER-------------*/
+
+header { /*14vh*/
+  position: relative; /*position relative to parent*/
+  padding: 4vh 2rem; /*padding on top/bottom and left/right*/
+  background: #fff0de;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.navbar { /*navbar container*/
+  width: 100%; /*full width*/
+  height: 5.5vh; /*height of navbar*/
+  max-width: 1920px; /*max width of navbar*/
+  margin: 0 auto; /*center navbar*/
+  display: flex; /*display navbar as flexbox*/
+  align-items: center; /*center items vertically*/
+  justify-content: space-between; /*space items horizontally*/
+}
+
+.navbar .logo a { /*logo container*/
+  font-size: 1.5rem; /*font size of logo*/
+  font-weight:bold; /*bold font*/
+}
+
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem; /*gap between links*/
+  list-style: none; /*remove bullet points*/
+}
+
+.navbar .links li a {
+  font-size: 1.4rem;
+  font-weight:900;
+  color:black;
+  text-decoration: none; /*remove underline*/
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .links li a:hover {
+  color: rgb(243, 133, 0);
+  font-size: 1.42rem;
+  transition: scale 0.2 ease;
+}
+
+.navbar .toggle_btn { /*toggle button container*/
+  color: #000000;
+  font-size: 1rem;  /*font size of toggle button*/
+  cursor: pointer; /*cursor shape when hover over toggle button*/
+  display: none; /*hide toggle button by default*/
+}
+
+.navbar .toggle_btn:hover { /*when hover over toggle button*/
+  color: rgb(243, 133, 0); /*change color to black*/
+}
+
+.action_btn { /*action button container*/
+  background-color: rgb(243, 133, 0); /*background color of action button*/
+  color: white; /*fff*/ /*color of action button*/
+  padding: 0.5rem 1rem; /*padding of action button*/
+  border: none; /*remove border*/
+  outline: none;  /*remove outline*/
+  border-radius: 20px; /*border radius of action button*/
+  font-size: 0.8rem; /*font size of action button*/
+  font-weight: bold; /*bold font of action button*/
+  cursor: pointer; /*cursor shape when hover over action button*/
+  transition: scale 0.2 ease; /*transition effect of action button*/
+}
+
+.action_btn:hover { /*when hover over action button*/
+  scale: 1.05; /*increase size of action button*/
+  color: #fff; /*change color to white*/
+}
+
+.action_btn:active { /*when click on action button*/
+  scale: 0.95; /*decrease size of action button*/
+}
+
+
+h1 {
+  font-size: 4rem;
+  text-align:center;
+  float: left;
+  padding-left: 70px;
+}
+
+.log-in {
+  font-size: 50px;
+  text-align:center;
+  float: center;
+  padding-right: 50px;
+}
+
+.div-textbox {
+  margin-top: 25vh;
+  padding-left: 0 10% 0 10%;
+}
+
+.box-input{
+  padding: 3vh 25% 3vh 8%;
+  margin-bottom: 15px;
+}
+
+input{
+  font-size: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between inputs */
+  margin: 0 auto;
+  /* width: 100px ; */
+  width: 40%;
+  /* margin-right: 100px; */
+}
+
+.stack-label {
+  /* padding-right: 5px; */
+  /* float: left; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.submit-button {
+  padding: 15px 25px;
+  margin-top: 10px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.364);
+  box-shadow: 1px 1px black;
+  background-color: rgb(243, 133, 0); /*background color of action button*/
+  color: white;
+  padding: 0.5rem 1rem; /*padding of action button*/
+  border: none; /*remove border*/
+  outline: none;  /*remove outline*/
+  border-radius: 20px; /*border radius of action button*/
+  font-size: 0.8rem; /*font size of action button*/
+  font-weight: bold; /*bold font of action button*/
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  transition: scale 0.2 ease;
+  scale: 1.05;
+
+}
+/*--------DROPDOWN MENU-----------*/
+
+.dropdown_menu { /*dropdown menu container*/
+  display: none; /*hide dropdown menu by default*/
+  position: absolute; /*position dropdown menu absolutely*/
+  right: 2rem; /*position dropdown menu to the right*/
+  top: 60px; /*position dropdown menu below navbar*/
+  height: 0; /*initial height of dropdown menu*/
+  width: 300px; /*width of dropdown menu*/
+  background: rgba(255, 255, 255, 0.1); /*background color of dropdown menu*/
+  backdrop-filter: blur(15px); /*blur effect of dropdown menu*/
+  border-radius: 10px; /*border radius of dropdown menu*/
+  overflow: hidden; /*hide overflow of dropdown menu*/
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /*transition effect of dropdown menu*/
+}
+
+.dropdown_menu.open { /*when dropdown menu is open*/
+  height: 205px; /*increase height of dropdown menu*/
+}
+
+.dropdown_menu li {  /*list item of dropdown menu*/
+  padding: 0.6rem; /*padding of dropdown menu items*/
+  display: flex; /*display dropdown menu items as flexbox*/
+  align-items: center; /*align dropdown menu items vertically*/
+  justify-content: center; /*align dropdown menu items horizontally*/
+}
+
+.dropdown_menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown_menu li a:hover {
+  color: rgb(243, 133, 0);
+}
+
+.dropdown_menu .action_btn { /*action button of dropdown menu*/
+  width: 100%; /*width of action button*/
+  display: flex; /*display action button as flexbox*/
+  justify-content: center; /*align action button horizontally*/
+  color: white;
+}
+
+.dropdown_menu .action_btn:hover {
+  color: white; /* keep the color white on hover */
+  background-color: rgb(243, 133, 0); /* maintain background color */
+}
+
+.dropdown_menu .action_btn a {
+  color: white;
+}
+
+/*----------RESPONSIVE DESIGN------------*/
+
+@media(max-width: 992px) { /*responsive design for screens with max-width 992px*/
+  .navbar .links, /*hide links on small screens with max-width 992px*/
+  .navbar .action_btn { /*hide action button on small screens with max-width 992px*/
+    display: none; /*hide links and action button*/
+  }
+  
+  .navbar .toggle_btn { /*show toggle button on small screens with max-width 992px*/
+    display: block; /*show toggle button*/
+    
+  }
+  .dropdown_menu { /*hide dropdown menu on small screens with max-width 992px*/
+    display: block; /*show dropdown menu*/
+  }
+} 
+
+@media(max-width: 576px) { /*responsive design for screens with max-width 576px*/
+  .dropdown_menu { /*hide dropdown menu on small screens with max-width 576px*/
+    left: 2rem; /*position dropdown menu to the left*/
+    width: unset; /*unset width of dropdown menu*/
+  }
+}

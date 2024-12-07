@@ -1,0 +1,466 @@
+* {
+  margin: 0; 
+  padding: 0;  
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+  font-family: 'Open Sans', sans-serif; /*font*/
+  font-size: 1rem;
+  max-height: 1080px;
+  max-width: 1920px;
+}
+
+body{ 
+  height: 100vh; /*100% of viewport height*/
+  /* background-color: rgb(247, 247, 247); */
+  /*background-image: url('');*/ /*if want background img*/
+  background-size: cover; /*cover the whole background*/
+  background-position: center; /*center the background*/
+  background: #fff7ef;
+  width: 100%;
+}
+
+li { 
+  list-style: none; /*remove default bullet points*/
+}
+
+a {
+  text-decoration: none; /*takes off underline*/
+  color: black; /*color of text*/
+  /* font-size: 1rem; font size */
+}
+
+ .dropdown_menu a:hover { /*when hover over link */
+  color: rgb(243, 133, 0); /*change color to orange*/
+  
+}
+/*-----------HEADER-------------*/
+
+header { /*14vh*/
+  position: relative; /*position relative to parent*/
+  padding: 4vh 2rem; /*padding on top/bottom and left/right*/
+  background: #fff0de;
+}
+
+.navbar { /*navbar container*/
+  width: 100%; /*full width*/
+  height: 5.5vh; /*height of navbar*/
+  max-width: 1920px; /*max width of navbar*/
+  margin: 0 auto; /*center navbar*/
+  display: flex; /*display navbar as flexbox*/
+  align-items: center; /*center items vertically*/
+  justify-content: space-between; /*space items horizontally*/
+}
+.navbar .logo a { /*logo container*/
+  font-size: 1.5rem; /*font size of logo*/
+  font-weight:bold; /*bold font*/
+}
+h2{
+  font-weight:500;
+  font-size: 1.5rem;
+  /* font-size: 5vh; */
+}
+
+
+.navbar .links { /*links container*/
+  display: flex; /*display links as flexbox*/
+  gap: 2.5rem; /*gap between links*/
+}
+
+.links li a {
+  font-size: 1.4rem;
+  font-weight:900;
+  color:black;
+}
+
+.links li a:hover {
+  color: rgb(243, 133, 0);
+  font-size: 1.42rem;
+  transition: scale 0.2 ease;
+}
+
+
+.navbar .toggle_btn { /*toggle button container*/
+  color: #000000;
+  font-size: 1.5rem;  /*font size of toggle button*/
+  cursor: pointer; /*cursor shape when hover over toggle button*/
+  display: none; /*hide toggle button by default*/
+}
+
+.navbar .toggle_btn:hover { /*when hover over toggle button*/
+  color: rgb(243, 133, 0); /*change color to black*/
+}
+
+
+.action_btn { /*action button container*/
+  background-color: rgb(243, 133, 0); /*background color of action button*/
+  color: white; /*fff*/ /*color of action button*/
+  padding: 0.5rem 1rem; /*padding of action button*/
+  border: none; /*remove border*/
+  outline: none;  /*remove outline*/
+  border-radius: 20px; /*border radius of action button*/
+  font-size: 0.8rem; /*font size of action button*/
+  font-weight: bold; /*bold font of action button*/
+  cursor: pointer; /*cursor shape when hover over action button*/
+  transition: scale 0.2 ease; /*transition effect of action button*/
+}
+
+.action_btn:hover { /*when hover over action button*/
+  scale: 1.05; /*increase size of action button*/
+  color: white;
+}
+
+.action_btn:active { /*when click on action button*/
+  scale: 0.95; /*decrease size of action button*/
+}
+
+/*--------DROPDOWN MENU-----------*/
+
+.dropdown_menu { /*dropdown menu container*/
+  display: none; /*hide dropdown menu by default*/
+  position: absolute; /*position dropdown menu absolutely*/
+  right: 2rem; /*position dropdown menu to the right*/
+  top: 60px; /*position dropdown menu below navbar*/
+  z-index: 10;
+  height: 0; /*initial height of dropdown menu*/
+  width: 300px; /*width of dropdown menu*/
+  background: rgba(255, 255, 255, 0.1); /*background color of dropdown menu*/
+  backdrop-filter: blur(50px); /*blur effect of dropdown menu*/
+  border-radius: 10px; /*border radius of dropdown menu*/
+  overflow: hidden; /*hide overflow of dropdown menu*/
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /*transition effect of dropdown menu*/
+}
+
+.dropdown_menu.open { /*when dropdown menu is open*/
+  height: 205px; /*increase height of dropdown menu*/
+}
+
+.dropdown_menu li {  /*list item of dropdown menu*/
+  padding: 0.6rem; /*padding of dropdown menu items*/
+  display: flex; /*display dropdown menu items as flexbox*/
+  align-items: center; /*align dropdown menu items vertically*/
+  justify-content: center; /*align dropdown menu items horizontally*/
+}
+
+.dropdown_menu .action_btn { /*action button of dropdown menu*/
+  width: 100%; /*width of action button*/
+  display: flex; /*display action button as flexbox*/
+  justify-content: center; /*align action button horizontally*/
+}
+
+.dropdown_menu .action_btn:hover {
+  color: white; /* keep the color white on hover */
+  background-color: rgb(243, 133, 0); /* maintain background color */
+}
+
+
+
+
+
+/*---------BODY------------*/
+
+.index { /*index.html section*/
+  height: calc(40vh - 60px); /*40% fullpage height - height of 
+  heading*/
+  /* padding-left: 20%;  
+  padding-right: 20%; */
+  width: 100%;
+
+  display: flex; /*display index.html section as flexbox*/
+  flex-direction: column; /*align index.html section vertically*/
+  align-items: center; /*align index.html section horizontally*/
+  justify-content:start; /*align index.html section vertically*/
+  text-align:center; /*align text of index.html section*/
+  color: black; /*change color of text of index.html section*/
+  padding-top: 4vh;
+}
+
+.index h1 { /*index h1 tag*/
+  font-size: 4rem; /*font size*/
+  margin-bottom: 1rem;/*between heading and subheading*/
+  font-weight:550;
+  
+}
+
+.chatbox {
+  /*height: 50vh;*/ /*40% fullpage height - height of 
+  heading*/
+  padding-left: 15%;  
+  padding-right: 15%;
+  width: 100%;
+
+  display: flex; /*display index.html section as flexbox*/
+  flex-direction: column; /*align index.html section vertically*/
+  align-items: center; /*align index.html section horizontally*/
+  justify-content:start; /*align index.html section vertically*/
+  text-align:center; /*align text of index.html section*/
+  color: black; /*change color of text of index.html section*/
+  padding-top: 32.5vh;
+  padding-bottom: 1vh;
+}
+
+ .chatbox textarea{
+  width: 100%;
+  height: 15vh;
+  padding: 1.5%;
+  outline: none;
+  resize: none;
+  font-size: 100%;
+  border-radius: 15px;
+  border-color: #bfbfbf;
+  background:#dbdbdb4f;
+  
+} 
+
+/* ------------FROM AI.CSS-------------- */
+#init {
+  margin-top: 2rem;
+  background: rgb(243, 133, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* font-size: 12px;
+  font-weight: 500; */
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem; /*font size of action button*/
+  font-weight: bold;
+}
+
+#init:hover { /*when hover over action button*/
+  scale: 1.05; /*increase size of action button*/
+  color: #fff; /*change color to white*/
+}
+
+.desc {
+  text-align: center;
+}
+
+.desc p {
+  color: black;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+
+
+.text {
+  font-size: 4.06rem;
+  font-weight: 800;
+  color: black;
+  margin: 0;
+}
+
+.parent {
+  position: relative;
+  height: 100%;
+  padding: 0 7rem;
+  /* padding: 0 10%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bot-img {
+  margin: 100px;
+  width: 63%;
+  height: 43vh;
+  /* width: 320px; */
+  /* height: 320px; */
+}
+
+.child {
+  box-shadow: 0 0 2px rgb(243, 133, 0);
+  border-radius: 15px; 
+  height: 65vh;
+  /* height: 30rem; */
+  width: 16rem;
+  margin: auto;
+  background: #fff0de;
+}
+
+/* .header-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  border: 1px solid rgb(231,231,231);
+  padding: 5px;
+} */
+
+.header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(243, 133, 0);
+  background: white;
+  width: 16rem;
+  padding: 5px 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  z-index: 1;
+  box-shadow: 0 0 2px rgb(175,175,175);
+}
+
+.h-child {
+  display: flex;
+  align-items: center;
+}
+
+.header span {
+  /* font-size: 13px; */
+  font-size: 0.813rem;
+  margin: 10%;
+  padding: 0;
+}
+
+.refBtn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.refBtn:hover {
+  color: rgb(243, 133, 0);
+}
+
+.name {
+  font-weight: 600;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 16rem;
+  background: #fff7ef;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: rgb(243, 133, 0);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 3px rgb(153,153,153);
+}
+
+#chat-box {
+  position: relative;
+  top: 40px;
+  padding: 25px 10px;
+  font-size: 12px;
+  height: 55vh;
+  overflow: auto;
+  background: #fff0de;
+  text-align: center;
+}
+
+/* these classes will be used in javascript file*/
+
+.msg {
+  background: #fff7ef;
+  padding: 5px 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: max-content;
+  font-size: 14px;
+  color: lightslategrey; 
+  box-shadow: 0 0 5px rgb(226,226,226);
+  max-width: 65%;
+}
+
+.test { /*users past input*/
+  text-align: right;
+  margin: 20px 0;
+}
+
+.rep {
+  background: rgb(253,243,224);
+  color: lightslategrey;
+  padding: 5px 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  font-size: 14px; 
+  box-shadow: 0 0 5px rgb(211,211,211); 
+}
+
+.opt {
+  padding: 5px 20px;
+  /* columns: lightsalmon; */
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 0.3rem 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  background: rgb(243, 133, 0);
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.opt:hover {
+  scale:1.1 ;
+  transition: scale 0.2 ease;
+  color: #fff0de;
+}
+
+/* .link {
+  text-decoration: none;
+  display: block;
+  text-align: center; 
+  color: aliceblue;
+  background: blueviolet;
+} */
+
+.m-link {
+  text-decoration: none;
+  color: white;
+  scale:1.5;
+  transition: scale 0.2 ease;
+}
+
+.m-link:hover {
+  color: #fff0de;
+  scale:1.5;
+  transition: scale 0.2 ease;
+}
+
+.link:active {
+  text-decoration: none;
+  background: white;
+  border: 1px solid blueviolet;
+  color: blueviolet;
+}
+
+/* ---------ABOVE AI.CSS------------ */
+
+/*----------RESPONSIVE DESIGN------------*/
+
+@media(max-width: 992px) { /*responsive design for screens with max-width 992px*/
+  .navbar .links, /*hide links on small screens with max-width 992px*/
+  .navbar .action_btn { /*hide action button on small screens with max-width 992px*/
+    display: none; /*hide links and action button*/
+  }
+  
+  .navbar .toggle_btn { /*show toggle button on small screens with max-width 992px*/
+    display: block; /*show toggle button*/
+    
+  }
+  .dropdown_menu { /*hide dropdown menu on small screens with max-width 992px*/
+    display: block; /*show dropdown menu*/
+  }
+} 
+
+@media(max-width: 576px) { /*responsive design for screens with max-width 576px*/
+  .dropdown_menu { /*hide dropdown menu on small screens with max-width 576px*/
+    left: 2rem; /*position dropdown menu to the left*/
+    width: unset; /*unset width of dropdown menu*/
+  }
+}

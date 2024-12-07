@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="practiceAbout.css">
+  <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+  <title>AYCHATBOT Home Page</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo"><h2>AYCHATBOT</h2>
+        </div>
+        <ul class="links">
+          <li><a href="practiceindex.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="SignUpLogIn.html">Sign Up / Log In</a></li>
+        </ul>
+        <a href="DarkAbout.html" class="action_btn">Dark Mode</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    
+    <div class="dropdown_menu">
+      <li><a href="practiceindex.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="SignUpLogIn.html">Sign Up / Log In</a></li>
+        <li><a href="DarkAbout.html" class="action_btn">Dark Mode</a></li>
+    </div>
+  </header>
+    <main>
+         <h1>Come Experience AYCHATBOT</h1>
+        <h2 class="sub_title">Join us in experiencing our diverse Web App with cutting edge AI powered technology</h2>
+        <div class="row">
+            <div class="column"> Behind the Scene<br><br>
+                <aside>
+                    <h3> Ahriel Young </h3>
+                    <div class="div-textbox">
+                        <p class="summary">As a dedicated student-athlete at Shepherd University, Young is working towards a major in Computer Information Systems with a focus on Computer Programming and Information Science. She has a strong passion for web development and enjoys creating programs that are both functional and appealing. With valuable experience in the field, Young is always looking to improve her skills and make a positive impact in the world of technology.</p>
+                    </div>
+                    <h3><br>Yogie Hartigan</h3>
+                    <div class="div-textbox">
+                        <p class="summary">Hartigan is a hardworking Computer Information Science major at Shepherd University, focusing on Cybersecurity and Networking. He successfully balances his studies with a vigorous role as a student-athlete, showing great dedication and determination. With several years of experience and a varied portfolio, he is recognized as a skilled web developer. Hartigan's passion for technology and problem-solving helps to create effective solutions, crediting him as a standout student in the fields of cybersecurity and web development.</p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="column2"> Mission Statement
+                <aside>
+                    <div class="div-textbox2"> 
+                        <p class="summary">At AYCHATBOT, our mission is to enhance everyday life by providing a reliable and intelligent assistant at your fingertips. We aim to empower users with a real-time communication tool that responds dynamically to individual input, ensuring that every information, advice, or simply a friendly chat, ATYCHATBOT is here to assist you. Our innovative platform is designed to adapt to your needs, making it easier than ever to find solutions and navigate daily challenges. No question is too big or too small--our goal is to be your go-to resource for all you inquiries, helping you make informed decisions and enriching your life along the way!</p>
+                    </div>
+                </aside>
+            </div>
+
+
+    </main>
+    <script>
+        /*defining variables*/
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+        toggleBtn.onclick = function() { /*When you click*/
+          dropDownMenu.classList.toggle('open') /*on toggle btn*/
+          const isOpen = dropDownMenu.classList.contains('open')
+    
+          toggleBtnIcon.classList = isOpen /*when toggle open*/
+          ? 'fa-solid fa-xmark' /*becomes X mark*/
+          : 'fa-solid fa-bars' /*closed stays hamburger*/
+        }
+      </script>
+</body>
+
+</html>
